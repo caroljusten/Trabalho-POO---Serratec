@@ -2,18 +2,17 @@ package br.com.serratec.git;
 
 import java.util.Scanner;
 
-public class Cliente {
+public class Gerente extends Funcionario {
 
-	protected String titular;
-	protected String cpf;
-	protected int senha;
+	private String agenciaResponsavel;
 
-	public Cliente(String titular, String cpf, int senha) {
-		this.titular = titular;
+	public  Gerente(String cpf, int senha, String agenciaResponsavel) {
 		this.cpf = cpf;
 		this.senha = senha;
+		this.cargo = "Gerente";
+		this.agenciaResponsavel = agenciaResponsavel;
 	}
-
+	
 	public void logarSistema() {
 		System.out.println("Informe seu CPF: ");
 		Scanner sc = new Scanner(System.in);
@@ -30,28 +29,12 @@ public class Cliente {
 		}
 	}
 
-	public String getTitular() {
-		return titular;
+	public String getAgenciaResponsavel() {
+		return agenciaResponsavel;
 	}
 
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-
-	public int getSenha() {
-		return senha;
-	}
-
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setAgenciaResponsavel(String agenciaResponsavel) {
+		this.agenciaResponsavel = agenciaResponsavel;
 	}
 
 }

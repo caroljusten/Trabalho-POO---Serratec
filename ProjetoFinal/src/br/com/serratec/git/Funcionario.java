@@ -2,15 +2,11 @@ package br.com.serratec.git;
 
 public abstract class Funcionario {
 
-	private int senha;
-	private String cpf;
-	private String cargo;
+	protected String cpf;
+	protected int senha;
+	protected String cargo;
 
-	public Funcionario(int senha, String cpf, String cargo) {
-		super();
-		this.senha = senha;
-		this.cpf = cpf;
-		this.cargo = cargo;
+	public void cadastraFuncionario() {
 	}
 
 	public int getSenha() {
@@ -38,3 +34,5 @@ public abstract class Funcionario {
 	}
 
 }
+
+

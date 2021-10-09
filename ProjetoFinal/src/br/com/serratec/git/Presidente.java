@@ -2,18 +2,14 @@ package br.com.serratec.git;
 
 import java.util.Scanner;
 
-public class Cliente {
-
-	protected String titular;
-	protected String cpf;
-	protected int senha;
-
-	public Cliente(String titular, String cpf, int senha) {
-		this.titular = titular;
+public class Presidente extends Funcionario {
+	
+	public void cadastraFuncionario(String cpf, int senha, String cargo) {
 		this.cpf = cpf;
 		this.senha = senha;
+		this.cargo = cargo;
 	}
-
+	
 	public void logarSistema() {
 		System.out.println("Informe seu CPF: ");
 		Scanner sc = new Scanner(System.in);
@@ -28,30 +24,6 @@ public class Cliente {
 			System.out.println("CPF ou Senha inválidos! Verifique seus dados e tente novamente");
 			System.exit(0);
 		}
-	}
-
-	public String getTitular() {
-		return titular;
-	}
-
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-
-	public int getSenha() {
-		return senha;
-	}
-
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
 	}
 
 }
