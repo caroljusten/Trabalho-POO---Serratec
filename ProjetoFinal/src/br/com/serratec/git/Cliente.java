@@ -2,29 +2,31 @@ package br.com.serratec.git;
 
 public class Cliente {
 
-	protected String titular;
-	protected int senha;
+	protected String nome;
 	protected String cpf;
+	protected String senha;
+	protected int tipo = 1;
 
-	public Cliente(String titular, int senha, String cpf) {
-		this.setTitular(titular);
-		this.setSenha(senha);
-		this.setCpf(cpf);
+	public Cliente(String nome, String cpf, String senha) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.senha = senha;
 	}
 
 	public String getTitular() {
-		return titular;
+		return nome;
 	}
 
-	public void setTitular(String titular) {
-		this.titular = titular;
+	public void setTitular(String nome) {
+		this.nome = nome;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
@@ -36,4 +38,16 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 }

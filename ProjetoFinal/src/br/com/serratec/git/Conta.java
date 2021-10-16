@@ -1,29 +1,50 @@
 package br.com.serratec.git;
 
+import java.util.ArrayList;
+
 public abstract class Conta {
 
-	protected static String cpfTitular;
+	ArrayList<Cliente> cliente = new ArrayList<Cliente>();
+	ArrayList<Funcionario> funcionario = new ArrayList<Funcionario>();
+
+	protected String cpfTitular;
 	protected double saldo;
 	protected String idAgencia;
 
-	protected static String getCpfTitular() {
+	public ArrayList<Cliente> getCliente() {
+		return cliente;
+	}
+
+	public ArrayList<Funcionario> getFuncionario() {
+		return funcionario;
+	}
+
+	public String getCpfTitular() {
 		return cpfTitular;
-
 	}
 
-	public Conta(String cpfTitular, double saldo, String idAgencia) {
-		super();
-		Conta.cpfTitular = cpfTitular;
-		this.saldo = saldo;
-		this.idAgencia = idAgencia;
-	}
-
-	public void setCpfTitular(String cpfTitular) {
-		Conta.cpfTitular = cpfTitular;
+	public double getSaldo() {
+		return saldo;
 	}
 
 	public String getIdAgencia() {
 		return idAgencia;
+	}
+
+	public void setCliente(ArrayList<Cliente> cliente) {
+		this.cliente = cliente;
+	}
+
+	public void setFuncionario(ArrayList<Funcionario> funcionario) {
+		this.funcionario = funcionario;
+	}
+
+	public void setCpfTitular(String cpfTitular) {
+		this.cpfTitular = cpfTitular;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 
 	public void setIdAgencia(String idAgencia) {

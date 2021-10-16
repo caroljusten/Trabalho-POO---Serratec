@@ -2,39 +2,42 @@ package br.com.serratec.git;
 
 public abstract class Funcionario {
 
-	private int senha;
-	private String cpf;
-	private String cargo;
+	protected String nome;
+	protected String cpf;
+	protected String senha;
+	protected int tipo = 2;
+	protected String cargo;
 
-	public Funcionario(int senha, String cpf, String cargo) {
-		super();
-		this.senha = senha;
-		this.cpf = cpf;
-		this.cargo = cargo;
-	}
-
-	public int getSenha() {
-		return senha;
-	}
-
-	public void setSenha(int senha) {
-		this.senha = senha;
+	public String getNome() {
+		return nome;
 	}
 
 	public String getCpf() {
 		return cpf;
 	}
 
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
-	public String getCargo() {
-		return cargo;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
+	public int getTipo() {
+		return tipo;
+	}
+
+	public String getCargo() {
+		return cargo;
 	}
 
 }
