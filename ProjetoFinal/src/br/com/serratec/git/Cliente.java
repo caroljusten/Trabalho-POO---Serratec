@@ -1,48 +1,32 @@
 package br.com.serratec.git;
 
-import java.util.Scanner;
-
 public class Cliente {
 
-	protected String titular;
+	protected String nome;
 	protected String cpf;
-	protected int senha;
+	protected String senha;
+	protected int tipo = 1;
 
-	public Cliente(String titular, String cpf, int senha) {
-		this.titular = titular;
+	public Cliente(String nome, String cpf, String senha) {
+		super();
+		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
 
-	public void logarSistema() {
-		System.out.println("Informe seu CPF: ");
-		Scanner sc = new Scanner(System.in);
-		String confereCPF = sc.nextLine();
-
-		System.out.println("Senha: ");
-		int confereSenha = sc.nextInt();
-
-		if (confereCPF == getCpf() && confereSenha == senha) {
-			System.out.println("Bem vindo(a), ");
-		} else {
-			System.out.println("CPF ou Senha inválidos! Verifique seus dados e tente novamente");
-			System.exit(0);
-		}
-	}
-
 	public String getTitular() {
-		return titular;
+		return nome;
 	}
 
-	public void setTitular(String titular) {
-		this.titular = titular;
+	public void setTitular(String nome) {
+		this.nome = nome;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
@@ -54,4 +38,16 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 }

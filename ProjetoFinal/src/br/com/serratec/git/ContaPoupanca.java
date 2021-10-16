@@ -4,7 +4,7 @@ public class ContaPoupanca extends Conta {
 	
 	private String tipo;
 
-	public ContaPoupanca(Long cpfTitular, String idAgencia) {
+	public ContaPoupanca(String cpfTitular, String idAgencia) {
 
 		this.idAgencia = idAgencia;
 		saldo = 0;

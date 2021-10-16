@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class ContaCorrente extends Conta {
 
 	private String tipo;
-	private Cliente cliente;
-	private Funcionario funcionario;
 
 	public ContaCorrente(Cliente cliente, String idAgencia) {
 		cpfTitular = cliente.getCpf();
@@ -44,7 +42,7 @@ public class ContaCorrente extends Conta {
 		System.out.println("Depósito realizado com sucesso!");
 	}
 
-	public void transfereConta() {
+	/*public void transfereConta() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Informe o valor da transferência: ");
 		double valorTransf = sc.nextLong();
@@ -61,30 +59,8 @@ public class ContaCorrente extends Conta {
 
 		System.out.println("Transferência concluída!\nValor: R$" + valorTransf + "\nEnviado de: " + getCpfTitular()
 				+ "\nPara: " + cpfDest);
-	}
+	}*/
 
-	public String getTipo() {
-		return tipo;
-	}
 
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public Funcionario getFuncionario() {
-		return funcionario;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
-	}
 
 }
